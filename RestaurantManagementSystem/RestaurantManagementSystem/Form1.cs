@@ -24,7 +24,7 @@ namespace RestaurantManagementSystem
 
         private void mainForm_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,6 +40,49 @@ namespace RestaurantManagementSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
+            DialogResult exitMsg = MessageBox.Show("Are you sure you want to close this application", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if( exitMsg == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Show();
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+    
+
+        private void btnCollection_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FoodCollectionFormcs newFoodType = new FoodCollectionFormcs();
+            newFoodType.Show();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Show();
         }
     }
 }
