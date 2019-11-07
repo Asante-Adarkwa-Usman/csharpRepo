@@ -24,7 +24,7 @@ namespace RestaurantManagementSystem
 
         private void mainForm_Load(object sender, EventArgs e)
         {
-            
+            bunifuTransition1.ShowSync(home1);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -75,14 +75,56 @@ namespace RestaurantManagementSystem
 
         private void btnCollection_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            FoodCollectionFormcs newFoodType = new FoodCollectionFormcs();
-            newFoodType.Show();
+            bunifuTransition1.ShowSync(collection1);
+            bunifuTransition1.HideSync(home1);
+          
+
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            this.Show();
+           bunifuTransition2.ShowSync(home1);
+            bunifuTransition1.HideSync(collection1);
+            //this.Show();
+        }
+
+        private void home1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCusService_Click(object sender, EventArgs e)
+        {
+
+            DialogResult exitMsg = MessageBox.Show("Are you sure you want to leave this page ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (exitMsg == DialogResult.Yes)
+            {
+                this.Close();
+                RequestForm request = new RequestForm();
+                request.Show();
+                this.Hide();
+            }
+            else
+            {
+                this.Show();
+            }
+           
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

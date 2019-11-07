@@ -38,5 +38,10 @@ namespace RestaurantManagementSystem
             mainForm New = new mainForm();
             New.Show();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
