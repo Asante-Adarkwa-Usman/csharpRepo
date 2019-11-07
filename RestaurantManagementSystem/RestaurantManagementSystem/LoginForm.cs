@@ -49,8 +49,8 @@ namespace RestaurantManagementSystem
             {
 
                 MessageBox.Show("You have successfully signed in", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mainForm Main = new mainForm();
-                Main.Show();
+                AdminForm admin = new AdminForm();
+                admin.Show();
                 this.Hide();
 
 

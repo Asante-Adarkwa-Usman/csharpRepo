@@ -173,7 +173,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 521);
+            this.label4.Location = new System.Drawing.Point(22, 521);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(222, 21);
             this.label4.TabIndex = 10;
@@ -183,7 +183,7 @@
             // 
             this.lbSignUp.AutoSize = true;
             this.lbSignUp.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSignUp.Location = new System.Drawing.Point(251, 521);
+            this.lbSignUp.Location = new System.Drawing.Point(253, 521);
             this.lbSignUp.Name = "lbSignUp";
             this.lbSignUp.Size = new System.Drawing.Size(71, 21);
             this.lbSignUp.TabIndex = 11;
