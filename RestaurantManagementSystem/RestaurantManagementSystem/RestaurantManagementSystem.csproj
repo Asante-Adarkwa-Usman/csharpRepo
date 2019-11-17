@@ -63,6 +63,12 @@
     <Compile Include="Collection.Designer.cs">
       <DependentUpon>Collection.cs</DependentUpon>
     </Compile>
+    <Compile Include="FinanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceForm.Designer.cs">
+      <DependentUpon>FinanceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FoodCollectionFormcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,11 +87,11 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="LoginForm_main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="LoginForm_main.Designer.cs">
+      <DependentUpon>LoginForm_main.cs</DependentUpon>
     </Compile>
     <Compile Include="MoreLocalFood.cs">
       <SubType>Form</SubType>
@@ -119,6 +125,9 @@
     <EmbeddedResource Include="Collection.resx">
       <DependentUpon>Collection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FinanceForm.resx">
+      <DependentUpon>FinanceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FoodCollectionFormcs.resx">
       <DependentUpon>FoodCollectionFormcs.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,8 +137,8 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm_main.resx">
+      <DependentUpon>LoginForm_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoreLocalFood.resx">
       <DependentUpon>MoreLocalFood.cs</DependentUpon>

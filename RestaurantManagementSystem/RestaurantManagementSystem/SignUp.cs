@@ -16,7 +16,8 @@ namespace RestaurantManagementSystem
         public SignUp()
         {
             InitializeComponent();
-           
+            OleDbConnection connection = new OleDbConnection();
+
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
@@ -37,16 +38,44 @@ namespace RestaurantManagementSystem
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            if (rbAdmin.Checked == true)
+            {
+                OleDbConnection connection = new OleDbConnection();
+                connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Admin')";
+                command.ExecuteNonQuery();
+                MessageBox.Show("Success");
+                connection.Close();
+            }
+            if (rbChef.Checked == true)
+            {
+                OleDbConnection connection = new OleDbConnection();
+                connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Chef')";
+                command.ExecuteNonQuery();
+                MessageBox.Show("Success");
+                connection.Close();
+            }
+            if (rbFinance.Checked == true)
+            {
+                OleDbConnection connection = new OleDbConnection();
+                connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Finance')";
+                command.ExecuteNonQuery();
+                MessageBox.Show("Success");
+                connection.Close();
+            }
 
-            OleDbConnection connection = new OleDbConnection();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem/Restaurant.accdb";
-            connection.Open();
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = connection;
-            command.CommandText = "insert into Signup (First_Name, Last_Name, Username, Password) values('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "')";
-            command.ExecuteNonQuery();
-            MessageBox.Show("Success");
-            connection.Close();
+
 
 
 
@@ -73,8 +102,8 @@ namespace RestaurantManagementSystem
 
                 if (adminPass.Text.Length == adminConPass.Text.Length)
                 {
-                    MessageBox.Show("You have successfully created an admin account,Let's get you sign in", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoginForm login = new LoginForm();
+                    MessageBox.Show("You have successfully created an account,Let's get you sign in", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoginForm_main login = new LoginForm_main();
                     login.Show();
                     this.Hide();
 
@@ -98,8 +127,8 @@ namespace RestaurantManagementSystem
 
         private void lbSignUp_Click(object sender, EventArgs e)
         {
-            LoginForm newLogin = new LoginForm();
-            newLogin.Show();
+            LoginForm_main login = new LoginForm_main();
+            login.Show();
             this.Hide();
         }
 
@@ -177,10 +206,22 @@ namespace RestaurantManagementSystem
 
         }
 
-        private void adminConPass_MouseEnter(object sender, EventArgs e)
-        {
+       private void adminConPass_MouseEnter(object sender, EventArgs e)
+         {
             adminConPass.isPassword = true;
             adminPass.isPassword = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            LoginForm_main login = new LoginForm_main();
+            login.Show();
+            this.Hide();
         }
     }
 }

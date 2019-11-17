@@ -6,7 +6,6 @@ C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantMan
 C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.csproj.GenerateResource.Cache
 C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.exe
 C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb
-C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.LoginForm.resources
 C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.SignUp.resources
 C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.FoodCollectionFormcs.resources
 C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\bin\Debug\Bunifu_UI_v1.5.3.dll
@@ -17,3 +16,5 @@ C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantMan
 C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.RequestForm.resources
 C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.AdminForm.resources
 C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.OrderListForm.resources
+C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.FinanceForm.resources
+C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.LoginForm_main.resources

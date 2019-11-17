@@ -24,8 +24,8 @@ namespace RestaurantManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SignUp signup = new SignUp();
-            signup.Show();
+            LoginForm_main login = new LoginForm_main();
+            login.Show();
             this.Hide();
         }
 
@@ -37,6 +37,35 @@ namespace RestaurantManagementSystem
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+            LoginForm_main login = new LoginForm_main();
+            login.Show();
+            this.Hide();
+        }
+
+        private void btnFinane_Click(object sender, EventArgs e)
+        {
+            LoginForm_main login = new LoginForm_main();
+            login.Show();
+            this.Hide();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
+            DialogResult exitMsg = MessageBox.Show("Are you sure you want to exit ? ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (exitMsg == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Show();
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
