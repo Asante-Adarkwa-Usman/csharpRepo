@@ -101,7 +101,7 @@
             this.txtLogUser.Size = new System.Drawing.Size(370, 43);
             this.txtLogUser.TabIndex = 33;
             this.txtLogUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtLogUser.OnValueChanged += new System.EventHandler(this.txtLogUser_OnValueChanged);
+            this.txtLogUser.TextChanged += new System.EventHandler(this.txtLogUser_TextChanged);
             // 
             // pictureBox4
             // 

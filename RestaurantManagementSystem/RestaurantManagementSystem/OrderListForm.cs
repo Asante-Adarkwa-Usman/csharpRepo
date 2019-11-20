@@ -16,5 +16,19 @@ namespace RestaurantManagementSystem
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            mainForm main = new mainForm();
+            main.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            RequestForm request = new RequestForm();
+            request.Show();
+            this.Hide();
+        }
     }
 }

@@ -23,6 +23,7 @@ namespace RestaurantManagementSystem
             txtLogUser.HintText = "Username";
             
             txtLogPass.HintText = "Password";
+
             txtLogPass.isPassword = true;
 
         }
@@ -38,15 +39,13 @@ namespace RestaurantManagementSystem
             {
                 MessageBox.Show("Password field cannot be empty ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            if (txtLogUser.Text == " " && txtLogPass.Text == " ")
+            else if(txtLogUser.Text == " " && txtLogPass.Text == " ")
             {
                 MessageBox.Show("Username and password fields cannot be empty ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                
-
-
+            }else {
+           
+           
+             
                 //Login as Admin
 
                 OleDbConnection con = new OleDbConnection();
@@ -57,6 +56,8 @@ namespace RestaurantManagementSystem
                 command.CommandText = "SELECT * FROM Signup WHERE Job_Status = 'Admin' and Username = '" + txtLogUser.Text + "' and Passcode = '" + txtLogPass.Text + "' ";
 
                 OleDbDataReader reader = command.ExecuteReader();
+                command.CommandText = "INSERT INTO Login ( Username, Passcode, Job_Status) VALUES('" + txtLogUser.Text + "','" + txtLogPass.Text + "', 'Admin')";
+
                 int counter = 0;   //provides the number of items in the database
                 while (reader.Read())
                 {
@@ -83,6 +84,8 @@ namespace RestaurantManagementSystem
                 Command.CommandText = "SELECT * FROM Signup WHERE Job_Status = 'Chef'  and Username = '" + txtLogUser.Text + "' and Passcode = '" + txtLogPass.Text + "' ";
 
                 OleDbDataReader read = Command.ExecuteReader();
+                Command.CommandText = "INSERT INTO Login ( Username, Passcode, Job_Status) VALUES('" + txtLogUser.Text + "','" + txtLogPass.Text + "', 'Chef')";
+
                 int count = 0;  //provides the number of items in the database
                 while (read.Read())
                 {
@@ -106,8 +109,10 @@ namespace RestaurantManagementSystem
                 OleDbCommand commands = new OleDbCommand();
                 commands.Connection = conn;
                 commands.CommandText = "SELECT * FROM Signup WHERE Job_Status = 'Finance'  and Username = '" + txtLogUser.Text + "' and Passcode = '" + txtLogPass.Text + "' ";
-
+            
                 OleDbDataReader R = commands.ExecuteReader();
+                commands.CommandText = "INSERT INTO Login ( Username, Passcode, Job_Status) VALUES('" + txtLogUser.Text + "','" + txtLogPass.Text + "', 'Finance')";
+               
                 int Count_Num = 0;  //provides the number of items in the database
                 while (R.Read())
                 {
@@ -116,20 +121,18 @@ namespace RestaurantManagementSystem
                 if (Count_Num == 1)
                 {
                     MessageBox.Show("Accountant login successful");
+
                     FinanceForm finance = new FinanceForm();
                     finance.Show();
                     this.Hide();
                     con.Close();
                 }
 
-                MessageBox.Show("You have successfully signed in", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AdminForm admin = new AdminForm();
-                admin.Show();
-                this.Hide();
-
-
 
             }
+
+
+
         }
 
         private void lbSignUp_Click(object sender, EventArgs e)
@@ -157,9 +160,9 @@ namespace RestaurantManagementSystem
             txtLogPass.isPassword = true;
         }
 
-        private void txtLogUser_OnValueChanged(object sender, EventArgs e)
+        private void txtLogUser_TextChanged(object sender, EventArgs e)
         {
-
+            txtLogUser.Focus();
         }
     }
 }

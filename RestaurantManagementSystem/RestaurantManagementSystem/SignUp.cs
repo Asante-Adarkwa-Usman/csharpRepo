@@ -47,7 +47,7 @@ namespace RestaurantManagementSystem
                 command.Connection = connection;
                 command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Admin')";
                 command.ExecuteNonQuery();
-                MessageBox.Show("Success");
+                MessageBox.Show(" Insertion Successul");
                 connection.Close();
             }
             if (rbChef.Checked == true)
@@ -59,7 +59,7 @@ namespace RestaurantManagementSystem
                 command.Connection = connection;
                 command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Chef')";
                 command.ExecuteNonQuery();
-                MessageBox.Show("Success");
+                MessageBox.Show("Insertion Successul");
                 connection.Close();
             }
             if (rbFinance.Checked == true)
@@ -71,7 +71,7 @@ namespace RestaurantManagementSystem
                 command.Connection = connection;
                 command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Finance')";
                 command.ExecuteNonQuery();
-                MessageBox.Show("Success");
+                MessageBox.Show("Insertion Successul");
                 connection.Close();
             }
 
@@ -96,8 +96,13 @@ namespace RestaurantManagementSystem
                 MessageBox.Show("Make sure that your password matches the previous one and it's not empty", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 adminConPass.ResetText();
                 adminConPass.HintText = "Confirm Password";
+
             }
-            else
+            else if (txtFirstName.Text=="" && txtLastName.Text=="" && adminUsername.Text == "" && adminPass.Text == "" && adminConPass.Text == "")
+            {
+                MessageBox.Show("The entry fields cannot be left blank ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else
+           
             {
 
                 if (adminPass.Text.Length == adminConPass.Text.Length)
@@ -111,7 +116,8 @@ namespace RestaurantManagementSystem
                 else if (adminPass.Text.Length != adminConPass.Text.Length)
                 {
                     MessageBox.Show("Your password does not match the previous one, try again", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    adminConPass.ResetText();
+                    adminConPass.HintText = "Confirm Password";
 
                 }
                 else
@@ -222,6 +228,11 @@ namespace RestaurantManagementSystem
             LoginForm_main login = new LoginForm_main();
             login.Show();
             this.Hide();
+        }
+
+        private void txtFirstName_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
