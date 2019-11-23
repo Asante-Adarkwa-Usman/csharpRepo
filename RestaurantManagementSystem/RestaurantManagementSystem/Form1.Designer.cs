@@ -34,7 +34,6 @@
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
             this.btnCusService = new System.Windows.Forms.Button();
             this.btnCollection = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -48,10 +47,10 @@
             this.btnInsta = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.home1 = new RestaurantManagementSystem.Home();
             this.collection1 = new RestaurantManagementSystem.Collection();
+            this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxMain)).BeginInit();
@@ -62,7 +61,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Controls.Add(this.btnCusService);
             this.panel1.Controls.Add(this.btnCollection);
             this.panel1.Controls.Add(this.btnHome);
@@ -86,7 +84,7 @@
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(3, 311);
+            this.button6.Location = new System.Drawing.Point(3, 279);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(274, 53);
@@ -94,25 +92,6 @@
             this.button6.Text = "About Us";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // btnMenu
-            // 
-            this.bunifuTransition1.SetDecoration(this.btnMenu, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.btnMenu, BunifuAnimatorNS.DecorationType.None);
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
-            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 227);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnMenu.Size = new System.Drawing.Size(274, 53);
-            this.btnMenu.TabIndex = 7;
-            this.btnMenu.Text = "Menu";
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnCusService
             // 
@@ -124,7 +103,7 @@
             this.btnCusService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCusService.Image = ((System.Drawing.Image)(resources.GetObject("btnCusService.Image")));
             this.btnCusService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCusService.Location = new System.Drawing.Point(3, 391);
+            this.btnCusService.Location = new System.Drawing.Point(3, 381);
             this.btnCusService.Name = "btnCusService";
             this.btnCusService.Padding = new System.Windows.Forms.Padding(5, 0, 20, 0);
             this.btnCusService.Size = new System.Drawing.Size(274, 53);
@@ -143,7 +122,7 @@
             this.btnCollection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCollection.Image = ((System.Drawing.Image)(resources.GetObject("btnCollection.Image")));
             this.btnCollection.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCollection.Location = new System.Drawing.Point(0, 150);
+            this.btnCollection.Location = new System.Drawing.Point(0, 174);
             this.btnCollection.Name = "btnCollection";
             this.btnCollection.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnCollection.Size = new System.Drawing.Size(274, 53);
@@ -303,6 +282,31 @@
             this.panel4.Size = new System.Drawing.Size(1092, 632);
             this.panel4.TabIndex = 17;
             // 
+            // home1
+            // 
+            this.home1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bunifuTransition1.SetDecoration(this.home1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.home1, BunifuAnimatorNS.DecorationType.None);
+            this.home1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.home1.Location = new System.Drawing.Point(0, 0);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(1092, 632);
+            this.home1.TabIndex = 1;
+            this.home1.Visible = false;
+            this.home1.Load += new System.EventHandler(this.home1_Load);
+            // 
+            // collection1
+            // 
+            this.collection1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bunifuTransition1.SetDecoration(this.collection1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.collection1, BunifuAnimatorNS.DecorationType.None);
+            this.collection1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.collection1.Location = new System.Drawing.Point(0, 0);
+            this.collection1.Name = "collection1";
+            this.collection1.Size = new System.Drawing.Size(1092, 632);
+            this.collection1.TabIndex = 0;
+            this.collection1.Visible = false;
+            // 
             // bunifuTransition1
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
@@ -347,31 +351,6 @@
             this.bunifuTransition2.DefaultAnimation = animation2;
             this.bunifuTransition2.MaxAnimationTime = 500;
             // 
-            // home1
-            // 
-            this.home1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bunifuTransition1.SetDecoration(this.home1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.home1, BunifuAnimatorNS.DecorationType.None);
-            this.home1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.home1.Location = new System.Drawing.Point(0, 0);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(1092, 632);
-            this.home1.TabIndex = 1;
-            this.home1.Visible = false;
-            this.home1.Load += new System.EventHandler(this.home1_Load);
-            // 
-            // collection1
-            // 
-            this.collection1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bunifuTransition1.SetDecoration(this.collection1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.collection1, BunifuAnimatorNS.DecorationType.None);
-            this.collection1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.collection1.Location = new System.Drawing.Point(0, 0);
-            this.collection1.Name = "collection1";
-            this.collection1.Size = new System.Drawing.Size(1092, 632);
-            this.collection1.TabIndex = 0;
-            this.collection1.Visible = false;
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -410,7 +389,6 @@
         private System.Windows.Forms.PictureBox picbxMain;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnCusService;
         private System.Windows.Forms.Button btnCollection;
         private System.Windows.Forms.Button btnHome;

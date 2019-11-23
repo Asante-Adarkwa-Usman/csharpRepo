@@ -38,96 +38,101 @@ namespace RestaurantManagementSystem
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            if (rbAdmin.Checked == true)
-            {
-                OleDbConnection connection = new OleDbConnection();
-                connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Admin')";
-                command.ExecuteNonQuery();
-                MessageBox.Show(" Insertion Successul");
-                connection.Close();
-            }
-            if (rbChef.Checked == true)
-            {
-                OleDbConnection connection = new OleDbConnection();
-                connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Chef')";
-                command.ExecuteNonQuery();
-                MessageBox.Show("Insertion Successul");
-                connection.Close();
-            }
-            if (rbFinance.Checked == true)
-            {
-                OleDbConnection connection = new OleDbConnection();
-                connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Finance')";
-                command.ExecuteNonQuery();
-                MessageBox.Show("Insertion Successul");
-                connection.Close();
-            }
-
-
-
-
-
-
-            if (adminUsername.Text == "")
-            {
-                MessageBox.Show("Your username field cannot be empty", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               
-            }
-            else if (adminPass.Text == "")
-            {
-                MessageBox.Show("Your password field  cannot be empty", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                adminPass.ResetText();
-                adminPass.HintText = "Password";
-            }
-            else if (adminConPass.Text == "")
-            {
-                MessageBox.Show("Make sure that your password matches the previous one and it's not empty", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                adminConPass.ResetText();
-                adminConPass.HintText = "Confirm Password";
-
-            }
-            else if (txtFirstName.Text=="" && txtLastName.Text=="" && adminUsername.Text == "" && adminPass.Text == "" && adminConPass.Text == "")
-            {
-                MessageBox.Show("The entry fields cannot be left blank ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else
-           
-            {
-
-                if (adminPass.Text.Length == adminConPass.Text.Length)
+            try {
+                if (rbAdmin.Checked == true)
                 {
-                    MessageBox.Show("You have successfully created an account,Let's get you sign in", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoginForm_main login = new LoginForm_main();
-                    login.Show();
-                    this.Hide();
+                    OleDbConnection connection = new OleDbConnection();
+                    connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Admin')";
+                    command.ExecuteNonQuery();
+                    MessageBox.Show(" Insertion Successul");
+                    connection.Close();
+                }
+                if (rbChef.Checked == true)
+                {
+                    OleDbConnection connection = new OleDbConnection();
+                    connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Chef')";
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Insertion Successul");
+                    connection.Close();
+                }
+                if (rbFinance.Checked == true)
+                {
+                    OleDbConnection connection = new OleDbConnection();
+                    connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Signup (First_Name, Last_Name, Username, Passcode,Job_Status) VALUES('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + adminUsername.Text + "','" + adminPass.Text + "','Finance')";
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Insertion Successul");
+                    connection.Close();
+                }
+
+
+
+
+
+
+                if (adminUsername.Text == "")
+                {
+                    MessageBox.Show("Your username field cannot be empty", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-                else if (adminPass.Text.Length != adminConPass.Text.Length)
+                else if (adminPass.Text == "")
                 {
-                    MessageBox.Show("Your password does not match the previous one, try again", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Your password field  cannot be empty", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    adminPass.ResetText();
+                    adminPass.HintText = "Password";
+                }
+                else if (adminConPass.Text == "")
+                {
+                    MessageBox.Show("Make sure that your password matches the previous one and it's not empty", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     adminConPass.ResetText();
                     adminConPass.HintText = "Confirm Password";
 
                 }
-                else
+                else if (txtFirstName.Text == "" && txtLastName.Text == "" && adminUsername.Text == "" && adminPass.Text == "" && adminConPass.Text == "")
+                {
+                    MessageBox.Show("The entry fields cannot be left blank ", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } else
+
                 {
 
+                    if (adminPass.Text.Length == adminConPass.Text.Length)
+                    {
+                        MessageBox.Show("You have successfully created an account,Let's get you sign in", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoginForm_main login = new LoginForm_main();
+                        login.Show();
+                        this.Hide();
+
+                    }
+                    else if (adminPass.Text.Length != adminConPass.Text.Length)
+                    {
+                        MessageBox.Show("Your password does not match the previous one, try again", "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        adminConPass.ResetText();
+                        adminConPass.HintText = "Confirm Password";
+
+                    }
+                    else
+                    {
+
+                    }
+
+
                 }
-
-
             }
-
+            catch (Exception)
+            {
+                MessageBox.Show("Exception");
+            }
 
         }
 

@@ -110,7 +110,7 @@ namespace RestaurantManagementSystem
 
             if (exitMsg == DialogResult.Yes)
             {
-                this.Close();
+               
                 RequestForm request = new RequestForm();
                 request.Show();
                 this.Hide();

@@ -34,13 +34,30 @@ namespace RestaurantManagementSystem
 
         private void btnHome1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             mainForm New = new mainForm();
             New.Show();
+            this.Hide();
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CustomerForm customer = new CustomerForm();
+            customer.Show();
+            this.Hide();
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            CustomerForm customer = new CustomerForm();
+            customer.Show();
+            this.Hide();
 
         }
     }
