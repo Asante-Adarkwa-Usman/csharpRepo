@@ -33,7 +33,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.btnCusService = new System.Windows.Forms.Button();
             this.btnCollection = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -60,7 +59,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.btnCusService);
             this.panel1.Controls.Add(this.btnCollection);
             this.panel1.Controls.Add(this.btnHome);
@@ -74,25 +72,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button6
-            // 
-            this.bunifuTransition1.SetDecoration(this.button6, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.button6, BunifuAnimatorNS.DecorationType.None);
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(3, 279);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(274, 53);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "About Us";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // btnCusService
             // 
             this.bunifuTransition1.SetDecoration(this.btnCusService, BunifuAnimatorNS.DecorationType.None);
@@ -103,7 +82,7 @@
             this.btnCusService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCusService.Image = ((System.Drawing.Image)(resources.GetObject("btnCusService.Image")));
             this.btnCusService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCusService.Location = new System.Drawing.Point(3, 381);
+            this.btnCusService.Location = new System.Drawing.Point(3, 346);
             this.btnCusService.Name = "btnCusService";
             this.btnCusService.Padding = new System.Windows.Forms.Padding(5, 0, 20, 0);
             this.btnCusService.Size = new System.Drawing.Size(274, 53);
@@ -122,7 +101,7 @@
             this.btnCollection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCollection.Image = ((System.Drawing.Image)(resources.GetObject("btnCollection.Image")));
             this.btnCollection.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCollection.Location = new System.Drawing.Point(0, 174);
+            this.btnCollection.Location = new System.Drawing.Point(0, 227);
             this.btnCollection.Name = "btnCollection";
             this.btnCollection.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnCollection.Size = new System.Drawing.Size(274, 53);
@@ -141,7 +120,7 @@
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 77);
+            this.btnHome.Location = new System.Drawing.Point(0, 112);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnHome.Size = new System.Drawing.Size(274, 53);
@@ -388,7 +367,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picbxMain;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnCusService;
         private System.Windows.Forms.Button btnCollection;
         private System.Windows.Forms.Button btnHome;

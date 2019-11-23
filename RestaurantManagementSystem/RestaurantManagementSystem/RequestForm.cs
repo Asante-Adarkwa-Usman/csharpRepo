@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace RestaurantManagementSystem
 {
@@ -24,9 +25,25 @@ namespace RestaurantManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LoginForm_main login = new LoginForm_main();
-            login.Show();
-            this.Hide();
+            string code = "1234";
+            string inp = Interaction.InputBox("Enter Staff Passcode ", "SECURITY", "0000");
+
+            if(inp == code)
+            {
+                MessageBox.Show("Staff verified, Access Granted");
+                LoginForm_main login = new LoginForm_main();
+                login.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show(" Access Denied ");
+                this.Show();
+
+            }
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,17 +55,40 @@ namespace RestaurantManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-     
-            LoginForm_main login = new LoginForm_main();
-            login.Show();
-            this.Hide();
+            string code = "1234";
+           string inp = Interaction.InputBox("Enter Staff Passcode ","SECURITY","0000");
+            if (inp == code)
+            {
+                MessageBox.Show("Staff verified, Access Granted");
+                LoginForm_main login = new LoginForm_main();
+                login.Show();
+                this.Hide();
+            }else
+            {
+                MessageBox.Show(" Access Denied ");
+                this.Show();
+
+            }
         }
 
         private void btnFinane_Click(object sender, EventArgs e)
         {
-            LoginForm_main login = new LoginForm_main();
-            login.Show();
-            this.Hide();
+            string code = "1234";
+            string inp = Interaction.InputBox("Enter Staff Passcode ", "SECURITY", "0000");
+
+            if (inp == code)
+            {
+                MessageBox.Show("Staff verified, Access Granted");
+                LoginForm_main login = new LoginForm_main();
+                login.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show(" Access Denied ");
+                this.Show();
+
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
