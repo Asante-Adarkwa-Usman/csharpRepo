@@ -29,105 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dessert1));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbKele = new System.Windows.Forms.RadioButton();
-            this.rdbChips = new System.Windows.Forms.RadioButton();
-            this.rdbDouNut = new System.Windows.Forms.RadioButton();
-            this.rdbPie = new System.Windows.Forms.RadioButton();
-            this.rdbCake = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnCustSubmit = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtCustTable = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCustQnty = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCustName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.groupBox1.SuspendLayout();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtprice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rdbKele);
-            this.groupBox1.Controls.Add(this.rdbChips);
-            this.groupBox1.Controls.Add(this.rdbDouNut);
-            this.groupBox1.Controls.Add(this.rdbPie);
-            this.groupBox1.Controls.Add(this.rdbCake);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(555, 67);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(323, 334);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            // 
-            // rdbKele
-            // 
-            this.rdbKele.AutoSize = true;
-            this.rdbKele.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbKele.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rdbKele.Location = new System.Drawing.Point(30, 278);
-            this.rdbKele.Name = "rdbKele";
-            this.rdbKele.Size = new System.Drawing.Size(121, 27);
-            this.rdbKele.TabIndex = 17;
-            this.rdbKele.Text = "Kelewele";
-            this.rdbKele.UseVisualStyleBackColor = true;
-            // 
-            // rdbChips
-            // 
-            this.rdbChips.AutoSize = true;
-            this.rdbChips.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbChips.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rdbChips.Location = new System.Drawing.Point(30, 228);
-            this.rdbChips.Name = "rdbChips";
-            this.rdbChips.Size = new System.Drawing.Size(86, 27);
-            this.rdbChips.TabIndex = 16;
-            this.rdbChips.Text = "Chips";
-            this.rdbChips.UseVisualStyleBackColor = true;
-            // 
-            // rdbDouNut
-            // 
-            this.rdbDouNut.AutoSize = true;
-            this.rdbDouNut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbDouNut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rdbDouNut.Location = new System.Drawing.Point(30, 175);
-            this.rdbDouNut.Name = "rdbDouNut";
-            this.rdbDouNut.Size = new System.Drawing.Size(134, 27);
-            this.rdbDouNut.TabIndex = 15;
-            this.rdbDouNut.Text = "Dough Nut";
-            this.rdbDouNut.UseVisualStyleBackColor = true;
-            // 
-            // rdbPie
-            // 
-            this.rdbPie.AutoSize = true;
-            this.rdbPie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbPie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rdbPie.Location = new System.Drawing.Point(30, 119);
-            this.rdbPie.Name = "rdbPie";
-            this.rdbPie.Size = new System.Drawing.Size(116, 27);
-            this.rdbPie.TabIndex = 14;
-            this.rdbPie.Text = "Meat Pie";
-            this.rdbPie.UseVisualStyleBackColor = true;
-            // 
-            // rdbCake
-            // 
-            this.rdbCake.AutoSize = true;
-            this.rdbCake.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbCake.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rdbCake.Location = new System.Drawing.Point(30, 70);
-            this.rdbCake.Name = "rdbCake";
-            this.rdbCake.Size = new System.Drawing.Size(85, 27);
-            this.rdbCake.TabIndex = 13;
-            this.rdbCake.Text = "Cake";
-            this.rdbCake.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(317, 24);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Menu";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnCustSubmit
             // 
@@ -186,7 +97,7 @@
             this.txtCustQnty.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtCustQnty.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(8)))), ((int)(((byte)(54)))));
             this.txtCustQnty.LineThickness = 3;
-            this.txtCustQnty.Location = new System.Drawing.Point(36, 213);
+            this.txtCustQnty.Location = new System.Drawing.Point(36, 261);
             this.txtCustQnty.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustQnty.Name = "txtCustQnty";
             this.txtCustQnty.Size = new System.Drawing.Size(388, 42);
@@ -212,36 +123,93 @@
             this.txtCustName.TabIndex = 10;
             this.txtCustName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(557, 96);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(298, 292);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "Cake",
+            "Meat Pie",
+            "Doughnuts",
+            "Kelewele"});
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cake",
+            "Meat Pie",
+            "Doughnuts",
+            "Kelewele"});
+            this.comboBox1.Location = new System.Drawing.Point(7, 78);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(285, 30);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(292, 24);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Menu";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtprice
+            // 
+            this.txtprice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtprice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtprice.ForeColor = System.Drawing.Color.White;
+            this.txtprice.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtprice.HintText = "Price";
+            this.txtprice.isPassword = false;
+            this.txtprice.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(8)))), ((int)(((byte)(54)))));
+            this.txtprice.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtprice.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(8)))), ((int)(((byte)(54)))));
+            this.txtprice.LineThickness = 3;
+            this.txtprice.Location = new System.Drawing.Point(36, 190);
+            this.txtprice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtprice.Name = "txtprice";
+            this.txtprice.Size = new System.Drawing.Size(388, 42);
+            this.txtprice.TabIndex = 15;
+            this.txtprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // dessert1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(8)))), ((int)(((byte)(54)))));
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.txtprice);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnCustSubmit);
             this.Controls.Add(this.txtCustTable);
             this.Controls.Add(this.txtCustQnty);
             this.Controls.Add(this.txtCustName);
             this.Name = "dessert1";
             this.Size = new System.Drawing.Size(914, 517);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdbKele;
-        private System.Windows.Forms.RadioButton rdbChips;
-        private System.Windows.Forms.RadioButton rdbDouNut;
-        private System.Windows.Forms.RadioButton rdbPie;
-        private System.Windows.Forms.RadioButton rdbCake;
-        private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCustSubmit;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCustTable;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCustQnty;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCustName;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtprice;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace RestaurantManagementSystem
 {
@@ -19,74 +20,41 @@ namespace RestaurantManagementSystem
 
         private void btnCustSubmit_Click(object sender, EventArgs e)
         {
-            try {
-
-                if (rdbChips.Checked)
-                {
+           
                     Dat AB = new Dat();
-                    AB.A = "INSERT INTO OrderedFood(Customer_Name, Food_Type,Food,Quantity,Table_Number) VALUES('" + txtCustName.Text + "','Dessert','Chips','" + txtCustQnty.Text + "','" + txtCustTable.Text + "')";
+                    AB.A = "INSERT INTO OrderedFood(Customer_Name, Food_Type,Price,Quantity,Table_Number) VALUES('" + txtCustName.Text + "','Dessert','" + txtprice.Text + "','" + comboBox1.Text+"','" + txtCustQnty.Text + "','" + txtCustTable.Text + "')";
                     AB.insert(AB.A);
                     MessageBox.Show("Food Successfully ordered");
                     txtCustName.ResetText();
                     txtCustQnty.ResetText();
                     txtCustTable.ResetText();
-
-                }
-
-                if (rdbKele.Checked)
-                {
-                    Dat AB = new Dat();
-                    AB.A = "INSERT INTO OrderedFood(Customer_Name, Food_Type,Food,Quantity,Table_Number) VALUES('" + txtCustName.Text + "','Dessert','Kelewele','" + txtCustQnty.Text + "','" + txtCustTable.Text + "')";
-                    AB.insert(AB.A);
-                    MessageBox.Show("Food Successfully ordered");
-                    txtCustName.ResetText();
-                    txtCustQnty.ResetText();
-                    txtCustTable.ResetText();
-
-                }
-
-                if (rdbCake.Checked)
-                {
-                    Dat AB = new Dat();
-                    AB.A = "INSERT INTO OrderedFood(Customer_Name, Food_Type,Food,Quantity,Table_Number) VALUES('" + txtCustName.Text + "','Dessert','Cake','" + txtCustQnty.Text + "','" + txtCustTable.Text + "')";
-                    AB.insert(AB.A);
-                    MessageBox.Show("Food Successfully ordered");
-                    txtCustName.ResetText();
-                    txtCustQnty.ResetText();
-                    txtCustTable.ResetText();
+            
 
 
-                }
+        }
 
-                if (rdbPie.Checked)
-                {
-                    Dat AB = new Dat();
-                    AB.A = "INSERT INTO OrderedFood(Customer_Name, Food_Type,Food,Quantity,Table_Number) VALUES('" + txtCustName.Text + "','Dessert','Meat Pie','" + txtCustQnty.Text + "','" + txtCustTable.Text + "')";
-                    AB.insert(AB.A);
-                    MessageBox.Show("Food Successfully ordered");
-                    txtCustName.ResetText();
-                    txtCustQnty.ResetText();
-                    txtCustTable.ResetText();
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OleDbConnection conn = new OleDbConnection();
 
-                }
+            conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
 
-                if (rdbDouNut.Checked)
-                {
-                    Dat AB = new Dat();
-                    AB.A = "INSERT INTO OrderedFood(Customer_Name, Food_Type,Food,Quantity,Table_Number) VALUES('" + txtCustName.Text + "','Dessert','Dough Nut','" + txtCustQnty.Text + "','" + txtCustTable.Text + "')";
-                    AB.insert(AB.A);
-                    MessageBox.Show("Food Successfully ordered");
-                    txtCustName.ResetText();
-                    txtCustQnty.ResetText();
-                    txtCustTable.ResetText();
+            conn.Open();
 
-                }
+            OleDbCommand command = new OleDbCommand();
 
-            }
-            catch (Exception)
+            command.Connection = conn;
+
+            command.CommandText = "select * from Foods where Food = '" + comboBox1.Text + "' ";
+
+            OleDbDataReader r = command.ExecuteReader();
+
+            while (r.Read())
             {
-                MessageBox.Show("Exception");
+                txtprice.Text = r[2].ToString();
             }
+
+            conn.Close();
         }
     }
 }

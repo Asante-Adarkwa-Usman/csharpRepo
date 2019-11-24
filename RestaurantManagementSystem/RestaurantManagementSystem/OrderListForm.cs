@@ -65,11 +65,15 @@ namespace RestaurantManagementSystem
 
                     txtfoodtype.Text = row.Cells[2].Value.ToString();
 
-                    txtfood.Text = row.Cells[3].Value.ToString();
+                    txtprice.Text = row.Cells[3].Value.ToString();
 
-                    txtquantity.Text = row.Cells[4].Value.ToString();
+                    txtfood.Text = row.Cells[4].Value.ToString();
 
-                    txtnumber.Text = row.Cells[5].Value.ToString();
+                    txtquantity.Text = row.Cells[5].Value.ToString();
+
+                    txtnumber.Text = row.Cells[6].Value.ToString();
+
+
 
 
                 }
@@ -96,7 +100,7 @@ namespace RestaurantManagementSystem
 
 
                     Dat a = new Dat();
-                    a.A = "insert into Finance (Customer_Name,Food_Type,Food,Quantity,Table_Number) values ('" + txtname.Text + "','" + txtfoodtype.Text + "','" + txtfood.Text + "','" + txtquantity.Text + "','" + txtnumber.Text + "')";
+                    a.A = "insert into Finance (Customer_Name,Food_Type,Price,Food,Quantity,Table_Number) values ('" + txtname.Text + "','" + txtfoodtype.Text + "','"+txtprice.Text+"','" + txtfood.Text + "','" + txtquantity.Text + "','" + txtnumber.Text + "')";
                     a.insert(a.A);
 
                     Dat AB = new Dat();

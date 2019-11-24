@@ -44,11 +44,11 @@
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.dessert11 = new RestaurantManagementSystem.dessert1();
             this.continental1 = new RestaurantManagementSystem.Continental();
             this.drinks1 = new RestaurantManagementSystem.Drinks();
             this.localdish1 = new RestaurantManagementSystem.localdish();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -225,6 +225,18 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label2.Location = new System.Drawing.Point(61, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 28);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Food Type";
+            // 
             // dessert11
             // 
             this.dessert11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(8)))), ((int)(((byte)(54)))));
@@ -270,18 +282,6 @@
             this.localdish1.Size = new System.Drawing.Size(908, 496);
             this.localdish1.TabIndex = 0;
             this.localdish1.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(61, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 28);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Food Type";
             // 
             // CustomerForm
             // 

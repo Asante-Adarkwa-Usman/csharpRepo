@@ -46,6 +46,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtprice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
@@ -111,6 +112,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtprice);
             this.panel3.Controls.Add(this.rdb);
             this.panel3.Controls.Add(this.txtquantity);
             this.panel3.Controls.Add(this.txtfood);
@@ -129,7 +131,7 @@
             this.rdb.AutoSize = true;
             this.rdb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdb.ForeColor = System.Drawing.Color.White;
-            this.rdb.Location = new System.Drawing.Point(12, 535);
+            this.rdb.Location = new System.Drawing.Point(13, 610);
             this.rdb.Name = "rdb";
             this.rdb.Size = new System.Drawing.Size(184, 33);
             this.rdb.TabIndex = 56;
@@ -150,7 +152,7 @@
             this.txtquantity.LineIdleColor = System.Drawing.Color.White;
             this.txtquantity.LineMouseHoverColor = System.Drawing.Color.White;
             this.txtquantity.LineThickness = 3;
-            this.txtquantity.Location = new System.Drawing.Point(12, 341);
+            this.txtquantity.Location = new System.Drawing.Point(12, 421);
             this.txtquantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Size = new System.Drawing.Size(377, 48);
@@ -170,7 +172,7 @@
             this.txtfood.LineIdleColor = System.Drawing.Color.White;
             this.txtfood.LineMouseHoverColor = System.Drawing.Color.White;
             this.txtfood.LineThickness = 3;
-            this.txtfood.Location = new System.Drawing.Point(12, 246);
+            this.txtfood.Location = new System.Drawing.Point(13, 321);
             this.txtfood.Margin = new System.Windows.Forms.Padding(4);
             this.txtfood.Name = "txtfood";
             this.txtfood.Size = new System.Drawing.Size(377, 47);
@@ -215,7 +217,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Teal;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(8)))), ((int)(((byte)(54)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(236, 579);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(237, 654);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(156, 58);
@@ -236,7 +238,7 @@
             this.txtnumber.LineIdleColor = System.Drawing.Color.White;
             this.txtnumber.LineMouseHoverColor = System.Drawing.Color.White;
             this.txtnumber.LineThickness = 3;
-            this.txtnumber.Location = new System.Drawing.Point(12, 442);
+            this.txtnumber.Location = new System.Drawing.Point(13, 517);
             this.txtnumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtnumber.Name = "txtnumber";
             this.txtnumber.Size = new System.Drawing.Size(377, 48);
@@ -279,7 +281,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1277, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(1249, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -305,6 +307,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1336, 100);
             this.panel2.TabIndex = 7;
+            // 
+            // txtprice
+            // 
+            this.txtprice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtprice.Enabled = false;
+            this.txtprice.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.txtprice.ForeColor = System.Drawing.Color.White;
+            this.txtprice.HintForeColor = System.Drawing.Color.White;
+            this.txtprice.HintText = "";
+            this.txtprice.isPassword = false;
+            this.txtprice.LineFocusedColor = System.Drawing.Color.White;
+            this.txtprice.LineIdleColor = System.Drawing.Color.White;
+            this.txtprice.LineMouseHoverColor = System.Drawing.Color.White;
+            this.txtprice.LineThickness = 3;
+            this.txtprice.Location = new System.Drawing.Point(12, 257);
+            this.txtprice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtprice.Name = "txtprice";
+            this.txtprice.Size = new System.Drawing.Size(377, 47);
+            this.txtprice.TabIndex = 57;
+            this.txtprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // OrderListForm
             // 
@@ -346,5 +368,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtnumber;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtname;
         private System.Windows.Forms.RadioButton rdb;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtprice;
     }
 }

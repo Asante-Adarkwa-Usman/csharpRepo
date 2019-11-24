@@ -39,40 +39,11 @@ namespace RestaurantManagementSystem
 
         private void FinanceForm_Load(object sender, EventArgs e)
         {
-           // txtamount.HintText = "quantity";
-            //txtfootp.HintText = "Food Type";
-           
+            Dat d = new Dat();
+            d.A = "select * from Finance";
+            d.insert(d.A);
 
-            //OleDbConnection con = new OleDbConnection();
-            ////  OleDbConnection con1 = new OleDbConnection();
-
-
-
-            //con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
-            //// con1.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Papillon\Documents\ProgrammersStaff\MyProjects\csharpRepo\RestaurantManagementSystem\Restaurantdb.accdb";
-
-
-            //con.Open();
-            //// con1.Open();
-
-            //OleDbCommand command = new OleDbCommand();
-            ////OleDbCommand command1 = new OleDbCommand();
-
-
-            //command.Connection = con;
-            //// command1.Connection = con1;
-
-
-            //command.CommandText = "SELECT Food_Type FROM Food_Type";
-
-            //OleDbDataReader reader = command.ExecuteReader();
-
-
-
-            //while (reader.Read())
-            //{
-            //    txtfoodtype.Items.Add(reader[0].ToString());
-            //}
+            bunifuCustomDataGrid1.DataSource = d.insert(d.A);
 
         }
 

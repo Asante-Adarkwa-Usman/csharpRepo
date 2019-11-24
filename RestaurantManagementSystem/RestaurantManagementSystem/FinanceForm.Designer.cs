@@ -204,7 +204,7 @@
             this.txttotal.LineIdleColor = System.Drawing.Color.Gray;
             this.txttotal.LineMouseHoverColor = System.Drawing.Color.Gray;
             this.txttotal.LineThickness = 3;
-            this.txttotal.Location = new System.Drawing.Point(36, 668);
+            this.txttotal.Location = new System.Drawing.Point(36, 666);
             this.txttotal.Margin = new System.Windows.Forms.Padding(4);
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(443, 48);
@@ -347,7 +347,7 @@
             this.txtquantity.LineIdleColor = System.Drawing.Color.Gray;
             this.txtquantity.LineMouseHoverColor = System.Drawing.Color.Gray;
             this.txtquantity.LineThickness = 3;
-            this.txtquantity.Location = new System.Drawing.Point(36, 592);
+            this.txtquantity.Location = new System.Drawing.Point(34, 574);
             this.txtquantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Size = new System.Drawing.Size(443, 48);
