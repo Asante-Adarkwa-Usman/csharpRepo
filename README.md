@@ -1,2 +1,2 @@
 # csharpRepo
-This repo is mainly for C-sharp projects...
+A Restaurant Management System built with C-Sharp.
